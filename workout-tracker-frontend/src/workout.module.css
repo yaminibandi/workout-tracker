@@ -1,0 +1,146 @@
+.appContainer {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: brown;
+}
+
+.appTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: brown;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: rgb(241, 229, 213);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.submitButton {
+  border: none;
+  background-color: brown;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.workoutList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.workoutHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.badgeLow {
+  background-color: grey;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+.badgeMedium {
+  background-color: rgb(77, 77, 8);
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+.badgeHigh {
+  background-color: rgb(99, 5, 5);
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+  gap: 16px;
+}
+
+.paginationButton {
+  border: none;
+  background-color: brown;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: brown;
+}
+
+.filterSelect {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid brown;
+  background-color: white;
+  color: brown;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ┌────────────────┐              ┌─────────────────┐         ┌─────────┐
+      │ React Frontend │              │ Express Backend │         │ MongoDB │
+      └────────────────┘              └─────────────────┘         └─────────┘
+                │                               │                       │
+                │POST /api/auth/login (email + p►ssword)                │
+                │                               │                       │
+                │                               │Check User & verify has►ed passw
+                │                               │                       │
+                ◄Returns JWT Token + User info┈┈│                       │
+                │                               │                       │
+                │GET /api/workouts (Headers: Aut►orization: Bearer <token>)
+                │                               │                       │
+                │                               │ Verify token & extract userId ─
+                │                               │◄─┘                    │
+                │                               │                       │
+                │                               │Workout.find({ user: us►rId, ...
+                │                               │                       │
+                │                               ◄Returns only this user's workout
+                │                               │                       │
+                ◄┈┈┈┈┈┈┈┈Workouts list┈┈┈┈┈┈┈┈┈┈│                       │
+                │                               │                       │ */
